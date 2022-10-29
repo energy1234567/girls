@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Анкета для девочек</h1>
+    </header>
+
+    <div class="center">
+      <form id="tg" class="a1" >
+        <div class="green">
+          <label for="">1.имя: </label>
+          <input name="name" type="text" />
+        </div>
+
+        <div class="yellow">
+          <label for="">2.День рождения; </label>
+          <input name="data" type="text" />
+        </div>
+
+        <div class="red">
+          <label for="">3.Знак зодиака; </label>
+          <input name="inputt" type="text" />
+        </div>
+
+        <div class="pink">
+          <label for="">4.Любимый цвет; </label>
+          <input type="text" />
+        </div>
+
+        <div class="blue">
+          <label for="">5.Любимый фильм; </label>
+          <input type="text" />
+        </div>
+
+        <div class="yellowgreen">
+          <label for="">6.Любимое время года; </label>
+          <input type="text" />
+        </div>
+
+        <div class="green2">
+          <label for="">7.Любимое время года; </label>
+          <input type="text" />
+        </div>
+
+        <div class="№">
+          <label for="">8.Хобби; </label>
+          <input type="text" />
+        </div>
+
+        <div class="orange">
+          <label for="">9.Имя парня; </label>
+          <input type="text" />
+        </div>
+
+        <div class="gold">
+          <label for="">10.Ник в инсте; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c1">
+          <label for="">11.Школа; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c2">
+          <label for="">12.Класс; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c3">
+          <label for="">13.номер дома; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c4">
+          <label for="">14.Этаж кв.; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c5">
+          <label for="">15.Ник"ONLY FANS"; </label>
+          <input type="text" />
+        </div>
+
+        <div class="c6">
+          <label for="">16.Еда; </label>
+          <input type="text" />
+        </div>
+
+        <!-- <p><iframe name="area" width="500" height="200"></iframe></p> -->
+
+        <!-- <p><input type="submit" value="Отправить"></p> -->
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <div class="img1">
+      <img src="./img/Autumn girl.png" alt="" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+      const TOKEN = "5663318406:AAFFTEHoV9lSE4mCF5H89MBLQBNPfbCF0XU";
+      const CHAT_ID = "-1001877375272";
+      const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      document.getElementById("tg").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let message = `<b>Заявка с сайта</b>\n`;
+        message += `<b>имя :</b>${this.name.value}\n`;
+        message += `<b> день рождения:</b>${this.data.value}`;
+        message += `<b> знак зодиака:</b>${this.inputt.value}`;
+        console.log(message);
+
+        axios.post(URI_API, {
+          chat_id: CHAT_ID,
+          parse_mode: "html",
+          text: message
+        })
+      })
+    </script>
+  </body>
+</html>

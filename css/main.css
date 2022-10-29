@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+body{
+    background:#FF99FF ;
+    font-family: 'Pacifico';
+    /* resize: none; */
+}
+
+
+header{
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: firebrick;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px #ff4f00,
+    0 0 0 7px #ffdb00,
+    0 0 0 10px #00ffa2;
+    text-indent: 30px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px auto;
+    width: 550px;
+    
+    
+    
+}
+
+
+
+.green{
+    color: green;
+
+}
+.yellow{
+    color: yellow
+    
+}
+.red{
+    color: red;
+}
+
+.pink{
+    color: palevioletred;
+}
+
+.blue{
+    color: blue;
+}
+
+.yellowgreen{
+    color: yellowgreen;
+}
+.green2{
+    color: rgb(8, 36, 36);
+}
+.№{
+    color: rgb(157, 0, 255);
+}
+.orange{
+    color: rgb(252, 108, 6);
+}
+
+.gold{
+    color: gold;
+}
+
+img{
+    width: 250px;
+   position: absolute;
+   top: 200px;
+   left: 100px;
+}
+
+.c1{
+    color: #00ffa2;
+}
+.c2{
+    color: darkgreen;
+}
+.с3{
+ color: slateblue,;
+}
+.c4{
+color: #993300;
+}
+.c5{
+   color: #33FF00;
+}
+.c6{
+ color: teal;
+}
+
